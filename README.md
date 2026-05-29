@@ -5,10 +5,10 @@ Interactive 24-panel visualization of hourly offer curves with a forecast for **
 ## Setup
 
 ```bash
-requirements.txt
-iypnb n
+pip install -r requirements.txt
+python offer_curve_analysis.py
 ```
-
+Code testing was mainly done in .ipynb notebooks. [test file](newgrid.ipynb)  
 The output is written to `offer_curves_forecast.html`. Open it in any browser.
 
 ## What it does
@@ -47,4 +47,5 @@ Priority order per hour:
 - Duplicate timestamp: the first row (after sorting) is kept as the valid record
 - Non-monotonic MW breakpoints are fixed by re-sorting (not dropping) unless a point was already removed by another rule
 
-
+## AI Disclosure
+Development was accelerated using Claude (Sonnet 4.6) to create the Plotly subplot layout.
